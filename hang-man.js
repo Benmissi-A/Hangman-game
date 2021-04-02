@@ -6,7 +6,7 @@ console.log(chalk.yellow(header))
 
 // menu principal du jeu
 
-let options = ['Commencer une partie','Meilleurs scores','Quitter le jeu']
+let options = ['Commencer une partie','Meilleurs scores']
 let index = readlineSync.keyInSelect(options, 'selectionner une option')
 switch(index) {
   case 0 :
@@ -14,7 +14,4 @@ switch(index) {
     break
   case 1 :
     console.log('voire les meilleurs scores')
-  case 2 :
-    console.log('quitter le jeu')
-    process.exit
 }
