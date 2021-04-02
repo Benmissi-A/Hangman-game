@@ -1,38 +1,29 @@
 const fs = require('fs')
-const { randomInt } = require('crypto')
-const words = fs.readFileSync('dict.txt','utf-8').toUpperCase().split('\n')
+const readlineSync = require('readline-sync')
+const {guess,randomWord} = require('./functions')
 
 
-//generation de mots aleatoire
-const randomWord = (array) => {
-  let n = randomInt(0, array.length)
-  return words[n]
-}
-
-//generation de mot secret
-//let word = randomWord(words)
+// une partie
 let word = randomWord(words)
 let secret = '_ '.repeat(word.length).trim()
+console.log(word)
+console.log(secret)
 
+/* const game = () =>{
+  console.log(secret)
+  //let question = readlineSync.question('choisissez une lettre')
+  [secret,isSuccess] = guess(word,secret,'A')
 
-
-//on devine les lettres
-const guess = (word,secret,char) => {
-  if(word.includes(char)){
-    tmp =''
-    for(let i = 0 ; i < word.length;++i){
-     word[i]===char ? tmp += char+' ' : tmp +='_ '
-    }
-    return [tmp,true]
-  }else{
-  return [secret,false]
-  } 
 }
+ */
 
 
-
-[secret,isSuccess] = guess(word , secret,'A')
-// une partie
-
-exports.guess = guess
-exports.randomWord = randomWord
+// let continuer = ['Continuer']
+// let index = readlineSync.keyInSelect(continuer, 'Voulez vous continuer')
+// switch(index) {
+//   case 0 :
+//     //console.log('commencer la partie')
+//     game()
+//     break
+// }
+//exports.game = game

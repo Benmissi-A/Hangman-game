@@ -12,6 +12,8 @@ let index = readlineSync.keyInSelect(options, 'selectionner une option')
 switch(index) {
   case 0 :
     console.log('commencer la partie')
+    
+  
 
     break
   case 1 :
