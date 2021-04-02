@@ -6,12 +6,12 @@ console.log(chalk.yellow(header))
 
 // menu principal du jeu
 
-let options = ['Commencer une partie','Meilleurs scores']
-let index = readlineSync.keyInSelect(options, 'selectionner une option')
-switch(index) {
-  case 0 :
-    console.log('commencer la partie')
-    break
-  case 1 :
-    console.log('voire les meilleurs scores')
-}
+// let options = ['Commencer une partie','Meilleurs scores']
+// let index = readlineSync.keyInSelect(options, 'selectionner une option')
+// switch(index) {
+//   case 0 :
+//     console.log('commencer la partie')
+//     break
+//   case 1 :
+//     console.log('voire les meilleurs scores')
+// }
