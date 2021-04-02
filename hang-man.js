@@ -2,6 +2,7 @@ const fs = require('fs')
 const readlineSync = require('readline-sync')
 const chalk = require('chalk')
 const header = fs.readFileSync('header.txt','utf-8')
+const words = fs.readFileSync('dict.txt','utf-8').toUpperCase().split('\n')
 console.log(chalk.yellow(header))
 const {guess,randomWord} = require('game')
 

@@ -1,22 +1,25 @@
 const fs = require('fs')
 const readlineSync = require('readline-sync')
 const {guess,randomWord} = require('./functions')
+const words = fs.readFileSync('dict.txt','utf-8').toUpperCase().split('\n')
 
 
 // une partie
-let word = randomWord(words)
-let secret = '_ '.repeat(word.length).trim()
-console.log(word)
-console.log(secret)
+const game = () => {
 
-/* const game = () =>{
+  let word = randomWord(words)
+  let secret = '_ '.repeat(word.length).trim()
+  let question = ''
   console.log(secret)
-  //let question = readlineSync.question('choisissez une lettre')
-  [secret,isSuccess] = guess(word,secret,'A')
+  while(word !== secret){
+    question = readlineSync.question('choisissez une lettre:  ')
+    console.log([secret,isSuccess] = guess(word,secret,question.toUpperCase()))
+    
+  }
 
+  // guess = (word,secret,question.toUpperCase())
 }
- */
-
+game()
 
 // let continuer = ['Continuer']
 // let index = readlineSync.keyInSelect(continuer, 'Voulez vous continuer')
