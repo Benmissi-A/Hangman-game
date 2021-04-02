@@ -12,17 +12,24 @@ const randomWord = (array) => {
 //generation de mot secret
 
 //on devine les lettres
+
 const guess = (word,secret,char) => {
-  console.log('function '+secret)
   tmp =''
-  if(word.includes(char)){
+  if(word.includes(char)){  //
     for(let i = 0 ; i < word.length;++i){
-      if( word[i]=== char && secret[i] !== '_ '){
-         tmp += char+' '
-     //word[i]=== char ? tmp += char+' ' : tmp +='_ '
+      if( char ===  word[i]){
+         
+        tmp += char+' '
+       // console.log('Tmp: '+tmp)
+        //word[i]=== char ? tmp += char+' ' : tmp +='_ '
       }else{
-          tmp +='_ '
+      if(secret[i] === word[i]) { //verification de l'existence
+        tmp += word[i]+' '
+      }else{
+
+        tmp +='_ '
       }
+        } 
     }
     return [tmp,true]
   }else{

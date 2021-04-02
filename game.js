@@ -7,15 +7,17 @@ const words = fs.readFileSync('dict.txt','utf-8').toUpperCase().split('\n')
 // une partie
 const game = () => {
 
-  let word = randomWord(words) // on recupere le mot
+ // let word = randomWord(words) // on recupere le mot
+  let word = 'AZAABC'
   let secret = '_ '.repeat(word.length)
   let question = ''
+  console.log(secret)
   while(word !== secret){
-    console.log(secret)
+   
     question = readlineSync.question('choisissez une lettre:  ')
-    let [tmp,isSuccess] = guess('ABC',secret,question.toUpperCase())
-    secret=tmp
-    console.log('secret '+secret)
+    let [tmp,isSuccess] = guess(word , secret , question.toUpperCase() )
+    secret = tmp
+    console.log('secret: '+secret)
     
   }
  
