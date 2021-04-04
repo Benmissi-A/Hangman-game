@@ -34,7 +34,63 @@ const guess = (word,secret,char) => {
   return [tmp,false]
   } 
 }
+// le pendu
+const hangMan = (nb) => {
+  const HANGMANPICS = [``,`
+    +---+
+    |   |
+        |
+        |
+        |
+        |
+  =========`, `
+    +---+
+    |   |
+    O   |
+        |
+        |
+        |
+  =========`, `
+    +---+
+    |   |
+    O   |
+    |   |
+        |
+        |
+  =========`, `
+    +---+
+    |   |
+    O   |
+   /|   |
+        |
+        |
+  =========`, `
+    +---+
+    |   |
+    O   |
+   /|\\  |
+        |
+        |
+  =========`, `
+    +---+
+    |   |
+    O   |
+   /|\\  |
+   /    |
+        |
+  =========`, `
+    +---+
+    |   |
+    O   |
+   /|\\  |
+   / \\  |
+        |
+  =========`]
+return HANGMANPICS[nb]
+}
+
 
 exports.randomWord = randomWord
 exports.secretword = secretword
 exports.guess = guess
+exports.hangMan = hangMan

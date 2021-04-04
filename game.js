@@ -1,6 +1,6 @@
 const fs = require('fs')
 const readlineSync = require('readline-sync')
-const {guess,randomWord,secretword} = require('./functions')
+const {guess,randomWord,secretword,hangMan} = require('./functions')
 const words = fs.readFileSync('dict.txt','utf-8').toUpperCase().split('\n')
 
 
@@ -10,16 +10,24 @@ const game = () => {
  // let word = randomWord(words) // on recupere le mot
   let word = randomWord(words)
   let secret = secretword(word)
+  let nbFail = 0
   let question = ''
   console.log(`Le mot a deviner est:`)
   console.log(secret.split('').join(' ').trim())
-  while(word !== secret){
+  while(word !== secret && nbFail < 7){
 
     question = readlineSync.question('choisissez une lettre:  ')
     let [tmp,isSuccess] = guess(word , secret , question.toUpperCase() )
     secret = tmp
+    isSuccess === true? 'ok' : nbFail++ 
+    console.log(nbFail)
     console.log(secret.split('').join(' ').trim())
-    
+    console.log(hangMan(nbFail))
+  }
+  if(word === secret){
+    console.log('gagné !')
+  }else{
+    console.log('pendu !')
   }
 }
 
