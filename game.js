@@ -1,6 +1,6 @@
 const fs = require('fs')
 const readlineSync = require('readline-sync')
-const {guess,randomWord} = require('./functions')
+const {guess,randomWord,secretword} = require('./functions')
 const words = fs.readFileSync('dict.txt','utf-8').toUpperCase().split('\n')
 
 
@@ -8,16 +8,17 @@ const words = fs.readFileSync('dict.txt','utf-8').toUpperCase().split('\n')
 const game = () => {
 
  // let word = randomWord(words) // on recupere le mot
-  let word = 'AZAABC'
-  let secret = '_ '.repeat(word.length)
+  let word = randomWord(words)
+  let secret = secretword(word)
   let question = ''
-  console.log(secret)
+  console.log(`Le mot a deviner est:`)
+  console.log(secret.split('').join(' ').trim())
   while(word !== secret){
-   
+
     question = readlineSync.question('choisissez une lettre:  ')
     let [tmp,isSuccess] = guess(word , secret , question.toUpperCase() )
     secret = tmp
-    console.log('secret: '+secret)
+    console.log(secret.split('').join(' ').trim())
     
   }
  
@@ -32,4 +33,4 @@ game()
 //     game()
 //     break
 // }
-//exports.game = game
+exports.game = game

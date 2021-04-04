@@ -10,26 +10,23 @@ const randomWord = (array) => {
 }
 
 //generation de mot secret
-
+const secretword = (word)=> {
+  return secret = '_'.repeat(word.length)
+}
 //on devine les lettres
-
 const guess = (word,secret,char) => {
   tmp =''
-  if(word.includes(char)){  //
+  if(word.includes(char)){
     for(let i = 0 ; i < word.length;++i){
-      if( char ===  word[i]){
-         
-        tmp += char+' '
+      if( char ===  word[i] && char !== secret[i]){   
+        tmp += char
        // console.log('Tmp: '+tmp)
         //word[i]=== char ? tmp += char+' ' : tmp +='_ '
+      }else if(word[i] === secret[i]) {
+        tmp += word[i]
       }else{
-      if(secret[i] === word[i]) { //verification de l'existence
-        tmp += word[i]+' '
-      }else{
-
-        tmp +='_ '
+        tmp +='_'
       }
-        } 
     }
     return [tmp,true]
   }else{
@@ -38,5 +35,6 @@ const guess = (word,secret,char) => {
   } 
 }
 
-exports.guess = guess
 exports.randomWord = randomWord
+exports.secretword = secretword
+exports.guess = guess
