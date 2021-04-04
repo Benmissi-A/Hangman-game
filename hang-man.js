@@ -22,5 +22,4 @@ switch(index) {
 
 // marche a suivre 
 //  le menu principal propose de lancer une partie
-
 //  

@@ -15,13 +15,11 @@ const secretword = (word)=> {
 }
 //on devine les lettres
 const guess = (word,secret,char) => {
-  tmp =''
+  let tmp =''
   if(word.includes(char)){
     for(let i = 0 ; i < word.length;++i){
       if( char ===  word[i] && char !== secret[i]){   
         tmp += char
-       // console.log('Tmp: '+tmp)
-        //word[i]=== char ? tmp += char+' ' : tmp +='_ '
       }else if(word[i] === secret[i]) {
         tmp += word[i]
       }else{
