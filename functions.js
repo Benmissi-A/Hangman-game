@@ -32,6 +32,21 @@ const guess = (word,secret,char) => {
   return [tmp,false]
   } 
 }
+// fonction continuer
+const continueGame = () => {
+  // let continuer = ['Continuer']
+// let index = readlineSync.keyInSelect(continuer, 'Voulez vous continuer')
+// switch(index) {
+//   case 0 :
+//     //console.log('commencer la partie')
+//     game()
+//     break
+// }
+
+}
+
+
+
 // le pendu
 const hangMan = (nb) => {
   const HANGMANPICS = [``,`

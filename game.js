@@ -12,10 +12,10 @@ const game = () => {
   let secret = secretword(word)
   let nbFail = 0
   let question = ''
-  console.log(`Le mot a deviner est:`)
-  console.log(secret.split('').join(' ').trim())
   while(word !== secret && nbFail < 7){
-
+    //console.clear()
+    console.log(`Le mot a deviner est:`)
+    console.log(secret.split('').join(' ').trim())
     question = readlineSync.question('choisissez une lettre:  ')
     let [tmp,isSuccess] = guess(word , secret , question.toUpperCase() )
     secret = tmp
