@@ -21,9 +21,7 @@ const game = () => {
     console.log(secret.split('').join(' ').trim())
     
   }
- 
 }
-game()
 
 // let continuer = ['Continuer']
 // let index = readlineSync.keyInSelect(continuer, 'Voulez vous continuer')

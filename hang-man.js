@@ -2,7 +2,7 @@ const fs = require('fs')
 const readlineSync = require('readline-sync')
 const chalk = require('chalk')
 const header = fs.readFileSync('header.txt','utf-8')
-const words = fs.readFileSync('dict.txt','utf-8').toUpperCase().split('\n')
+//const words = fs.readFileSync('dict.txt','utf-8').toUpperCase().split('\n')
 const {game} = require('./game')
 console.log(chalk.yellow(header))
 
