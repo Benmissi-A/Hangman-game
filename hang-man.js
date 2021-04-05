@@ -9,11 +9,10 @@ const { Console } = require('console')
 
 // menu principal du jeu
 
+console.log(chalk.yellow(header))
 let options = ['Commencer une partie','Meilleurs scores']
 let index = ''
 while(index !== -1){ // boucle qui propose le menu cancel nous fait sortir du programme
-  console.clear()
-  console.log(chalk.yellow(header))
   index = readlineSync.keyInSelect(options, 'selectionner une option')
   switch(index) {
     case 0 :
@@ -24,4 +23,3 @@ while(index !== -1){ // boucle qui propose le menu cancel nous fait sortir du pr
       console.log('voire les meilleurs scores')
   }
 }
- 
