@@ -12,7 +12,6 @@ const bravo = fs.readFileSync('./bravo.txt','utf-8')
 const game = () => {
 
  let word = randomWord() // on genere le mot
-
  let nbWords = 0
  let totalFail = 0
  let indexGame =''
@@ -80,7 +79,7 @@ const game = () => {
   console.log('')
   let register= ""
   while(register.length !==3){
-  register = readlineSync.question('Entrez votre nom: ').toUpperCase()
+  register = readlineSync.question('Entrez trois lettres: ').toUpperCase()
   addScore(register,nbWords,totalFail)
   }
 }
