@@ -2,6 +2,8 @@ const fs = require('fs')
 const { randomInt } = require('crypto')
 const words = fs.readFileSync('dict.txt','utf-8').toUpperCase().split('\n')
 const readlineSync = require('readline-sync')
+const chalk = require('chalk')
+
 
 //generation de mots aleatoire
 const randomWord = () => {
@@ -44,11 +46,23 @@ const ranking = () => {
   let ranked = [...scoresData]
   //console.log(ranked)
   ranked = ranked.sort((a,b) => (a.totalScore < b.totalScore) ? 1 : ((b.totalScore < a.totalScore) ? -1 : 0))
-  console.log(ranked)
+  //console.log(ranked)
   // on boucle pour les 10 meilleurs
-  for(let user of ranked.slice(4)){
-    console.log(`${ranked.userName} - ${ranked.userName}`)
+  console.log(chalk.cyan.bold(`       Rank: 1st !!! ${ranked[0].userName} - Words: ${ranked[0].nbWords} - Fails: ${ranked[0].nbFail} - SCORE: ${ranked[0].totalScore}`))
+  console.log('')
+  console.log(chalk.yellow.bold(`     Rank: 2nd !! ${ranked[1].userName} - Words: ${ranked[1].nbWords} - Fails: ${ranked[1].nbFail} - SCORE: ${ranked[1].totalScore}`))
+  console.log('')
+  console.log(chalk.yellow.bold(`   Rank: 3rd ! ${ranked[2].userName} - Words: ${ranked[2].nbWords} - Fails: ${ranked[2].nbFail} - SCORE: ${ranked[2].totalScore}`))
+  console.log('')
+  let i = 4
+  for(let user of ranked.slice(3,10)){
+
+    console.log(`${' '.repeat(i)} Rank: ${i}  ${user.userName} - Words: ${user.nbWords} - Fails: ${user.nbFail} - SCORE: ${user.totalScore}`)
+    ++i
   }
+   console.log('')
+  // console.log(`   Last: ${ranked[2].userName} - Words: ${ranked[2].nbWords} - Fails: ${ranked[2].nbFail} - SCORE: ${ranked[2].totalScore}`)
+   console.log('')
 }
 
 const addScore = (userName,nbWords,nbFail,totalScore) => {
