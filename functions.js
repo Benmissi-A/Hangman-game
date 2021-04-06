@@ -20,9 +20,11 @@ const guess = (word,secret,char) => {
     for(let i = 0 ; i < word.length;++i){
       if( char ===  word[i] && char !== secret[i]){   
         tmp += char
-      }else if(word[i] === secret[i]) {
+      }
+      else if(word[i] === secret[i]) {
         tmp += word[i]
-      }else{
+      }
+      else{
         tmp +='_'
       }
     }
