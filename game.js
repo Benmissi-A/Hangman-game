@@ -11,8 +11,8 @@ const bravo = fs.readFileSync('./bravo.txt','utf-8')
 // une partie
 const game = () => {
 
- //let word = randomWord() // on genere le mot
- let word = 'A'
+ let word = randomWord() // on genere le mot
+
  let nbWords = 0
  let totalFail = 0
  let indexGame =''
@@ -75,8 +75,9 @@ const game = () => {
   }
   total = nbWords*10-totalFail
   total >= 0 ? total = total : total = 0
+  console.log('')
   console.log(`Vous avez trouvé ${nbWords} ete fait ${totalFail} votre score est de ${total} points`)
-
+  console.log('')
   let register= ""
   while(register.length !==3){
   register = readlineSync.question('Entrez votre nom: ').toUpperCase()
