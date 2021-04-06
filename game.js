@@ -2,15 +2,15 @@ const fs = require('fs')
 const readlineSync = require('readline-sync')
 const chalk = require('chalk')
 const {guess,randomWord,secretword,hangMan} = require('./functions')
-const words = fs.readFileSync('dict.txt','utf-8').toUpperCase().split('\n')
 const header = fs.readFileSync('./header.txt','utf-8')
+const ingame = fs.readFileSync('./game.txt','utf-8')
 const pendu = fs.readFileSync('./pendu.txt','utf-8')
 const bravo = fs.readFileSync('./bravo.txt','utf-8')
 
 // une partie
 const game = () => {
 
- let word = randomWord(words) // on genere le mot
+ let word = randomWord() // on genere le mot
  let nbWords = 0
  let indexGame =''
  letscore = 0
@@ -22,6 +22,8 @@ const game = () => {
   let question = ''
   while(word !== secret && nbFail < 7){
     console.log(header)
+    console.log(ingame)
+    console.log('')
     console.log(`nombre de chances restantes: ${7 - nbFail}`)
     console.log(hangMan(nbFail))
     console.log(`Le mot a deviner est:`)
@@ -37,6 +39,8 @@ const game = () => {
     
     if(word === secret){ // on verifie les conditions de victoires ou defaite au debut de la boucle
       console.log(chalk.green(header))
+      console.log(chalk.green(ingame))
+      console.log('')
       console.log(hangMan(8))
       console.log('')
       console.log(chalk.green(bravo))
@@ -52,6 +56,8 @@ const game = () => {
       }
       if (nbFail > 6){
         console.log(chalk.red(header))
+        console.log(chalk.red(ingame))
+        console.log('')
         console.log(hangMan(7))
         console.log('')
         console.log(chalk.red(pendu))

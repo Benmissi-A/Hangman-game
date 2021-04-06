@@ -1,21 +1,19 @@
 const fs = require('fs')
-const { join } = require('path')
+const chalk = require('chalk')
+const readlineSync = require('readline-sync')
+const header = fs.readFileSync('./header.txt','utf-8')
+const best = fs.readFileSync('./best-scores.txt','utf-8')
+const {ranking} = require('./functions')
 
 
-// on affiche les scores
-const getScores = () => {
-  const scoresData =JSON.parse(fs.readFileSync('score-list.json','utf-8'))
-  console.log(scoresData)
+const bestScores = () => {
+  console.clear()
+  console.log(chalk.magenta(header))
+  console.log(chalk.magenta(best))
+  console.log('')
+  ranking()
+
+    let quit = readlineSync.question('presser enter pour retourner au menu')
+        quit = 'quit'
 }
-
-// enregistre les scores
-const addScore = (userName,nbWords,nbFail,totalScore) => {
-  const scoresData =JSON.parse(fs.readFileSync('score-list.json','utf-8'))
-  let array= [...scoresData]
-  let user = { userName: userName, nbWords: nbWords,nbFail:nbFail,totalScore: totalScore }
-  array.push(user)
-  fs.writeFileSync('score-list.json',JSON.stringify(array))
-
-}
-//addScore('AAA',3,6,0)
-getScores()
+exports.bestScores = bestScores
