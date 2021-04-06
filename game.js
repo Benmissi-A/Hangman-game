@@ -7,7 +7,6 @@ const header = fs.readFileSync('./header.txt','utf-8')
 const pendu = fs.readFileSync('./pendu.txt','utf-8')
 const bravo = fs.readFileSync('./bravo.txt','utf-8')
 
-
 // une partie
 const game = () => {
 

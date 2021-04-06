@@ -33,14 +33,6 @@ const guess = (word,secret,char) => {
   } 
 }
 
-//scores
-const scoreCount = (scores) => {
-
-}
-const setScores = () => {
-
-}
-
 // le pendu
 const hangMan = (nb) => {
   const HANGMANPICS = [``,`
