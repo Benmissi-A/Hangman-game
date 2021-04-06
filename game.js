@@ -11,14 +11,13 @@ const bravo = fs.readFileSync('bravo.txt','utf-8')
 // une partie
 const game = () => {
 
- // let word = randomWord(words) // on recupere le mot
+ let word = randomWord(words) // on genere le mot
  let nbWords = 0
  let indexGame =''
  letscore = 0
  while(indexGame !== -1){ // boucle qui propose de continuer si le mot a été trouvé
   console.clear()
-  let word = 'ABC'
-  // let word = randomWord(words)
+  
   let secret = secretword(word)
   let nbFail = 0
   let question = ''
