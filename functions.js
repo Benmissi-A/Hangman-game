@@ -92,6 +92,13 @@ const hangMan = (nb) => {
    /|\\  |
    / \\  |
         |
+  =========`, `
+     
+   
+  
+    O/    
+   /|   
+   / \\   
   =========`]
 return HANGMANPICS[nb]
 }
