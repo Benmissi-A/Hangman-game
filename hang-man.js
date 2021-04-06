@@ -1,10 +1,9 @@
 const fs = require('fs')
 const readlineSync = require('readline-sync')
 const chalk = require('chalk')
-const header = fs.readFileSync('header.txt','utf-8')
-//const words = fs.readFileSync('dict.txt','utf-8').toUpperCase().split('\n')
+const header = fs.readFileSync('./header.txt','utf-8')
 const {game} = require('./game')
-const { Console } = require('console')
+/* const { Console } = require('console') */
 
 
 // menu principal du jeu

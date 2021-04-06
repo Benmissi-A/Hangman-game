@@ -3,9 +3,9 @@ const readlineSync = require('readline-sync')
 const chalk = require('chalk')
 const {guess,randomWord,secretword,hangMan} = require('./functions')
 const words = fs.readFileSync('dict.txt','utf-8').toUpperCase().split('\n')
-const header = fs.readFileSync('header.txt','utf-8')
-const pendu = fs.readFileSync('pendu.txt','utf-8')
-const bravo = fs.readFileSync('bravo.txt','utf-8')
+const header = fs.readFileSync('./header.txt','utf-8')
+const pendu = fs.readFileSync('./pendu.txt','utf-8')
+const bravo = fs.readFileSync('./bravo.txt','utf-8')
 
 
 // une partie
