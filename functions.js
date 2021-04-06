@@ -65,8 +65,10 @@ const ranking = () => {
    console.log('')
 }
 
-const addScore = (userName,nbWords,nbFail,totalScore) => {
+const addScore = (userName,nbWords,nbFail) => {
   const scoresData =JSON.parse(fs.readFileSync('score-list.json','utf-8'))
+  totalScore = nbWords*10-nbFail
+  totalScore >= 0 ? totalScore = totalScore : totalScore = 0
   let array= [...scoresData]
   let user = { userName: userName, nbWords: nbWords,nbFail:nbFail,totalScore: totalScore }
   array.push(user)

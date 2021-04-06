@@ -1,19 +1,22 @@
 const fs = require('fs')
 const readlineSync = require('readline-sync')
 const chalk = require('chalk')
-const {guess,randomWord,secretword,hangMan} = require('./functions')
+const {guess,randomWord,secretword,hangMan,addScore} = require('./functions')
 const header = fs.readFileSync('./header.txt','utf-8')
 const ingame = fs.readFileSync('./game.txt','utf-8')
 const pendu = fs.readFileSync('./pendu.txt','utf-8')
 const bravo = fs.readFileSync('./bravo.txt','utf-8')
 
+
 // une partie
 const game = () => {
 
- let word = randomWord() // on genere le mot
+ //let word = randomWord() // on genere le mot
+ let word = 'A'
  let nbWords = 0
+ let totalFail = 0
  let indexGame =''
- letscore = 0
+
  while(indexGame !== -1){ // boucle qui propose de continuer si le mot a été trouvé
   console.clear()
   
@@ -68,6 +71,16 @@ const game = () => {
       }
     
     }
+    totalFail+=nbFail
+  }
+  total = nbWords*10-totalFail
+  total >= 0 ? total = total : total = 0
+  console.log(`Vous avez trouvé ${nbWords} ete fait ${totalFail} votre score est de ${total} points`)
+
+  let register= ""
+  while(register.length !==3){
+  register = readlineSync.question('Entrez votre nom: ').toUpperCase()
+  addScore(register,nbWords,totalFail)
   }
 }
 

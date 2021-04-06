@@ -1,5 +1,5 @@
 const fs = require('fs')
-
+const chalk = require('chalk')
 const readlineSync = require('readline-sync')
 const header = fs.readFileSync('./header.txt','utf-8')
 const best = fs.readFileSync('./best-scores.txt','utf-8')
