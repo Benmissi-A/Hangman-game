@@ -5,7 +5,7 @@ const header = fs.readFileSync('./src/pics-hangman/header.txt', 'utf-8')
 const menu = fs.readFileSync('./src/pics-hangman/menu.txt', 'utf-8')
 const { game } = require('./src/game/game-fr')
 const { bestScores } = require('./src/high-score/scores-fr')
-const { checkLoading } = require('./loading')
+const { checkLoading } = require('./prog-check-load/loading')
 /* const { Console } = require('console') */
 
 while (true) {
