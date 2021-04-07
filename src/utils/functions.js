@@ -42,7 +42,7 @@ const guess = (word, secret, char) => {
 // les scores
 
 const ranking = () => {
-  const scoresData = JSON.parse(fs.readFileSync('./src/high-score/score-list.json', 'utf-8'))
+  const scoresData = JSON.parse(fs.readFileSync('./src/high-score/score-list-fr.json', 'utf-8'))
   let ranked = [...scoresData]
   //console.log(ranked)
   ranked = ranked.sort((a, b) => (a.totalScore < b.totalScore) ? 1 : ((b.totalScore < a.totalScore) ? -1 : 0))
@@ -66,13 +66,13 @@ const ranking = () => {
 }
 
 const addScore = (userName, nbWords, nbFail) => {
-  const scoresData = JSON.parse(fs.readFileSync('./src/high-score/score-list.json', 'utf-8'))
+  const scoresData = JSON.parse(fs.readFileSync('./src/high-score/score-list-fr.json', 'utf-8'))
   totalScore = nbWords * 10 - nbFail
   totalScore >= 0 ? totalScore = totalScore : totalScore = 0
   let array = [...scoresData]
   let user = { userName: userName, nbWords: nbWords, nbFail: nbFail, totalScore: totalScore }
   array.push(user)
-  fs.writeFileSync('./src/high-score/score-list.json', JSON.stringify(array))
+  fs.writeFileSync('./src/high-score/score-list-fr.json', JSON.stringify(array))
 }
 
 // le pendu
