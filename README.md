@@ -14,3 +14,6 @@ $ yarn add readline-sync
 ```
 
 ## Usage
+
+- ....
+- ....
