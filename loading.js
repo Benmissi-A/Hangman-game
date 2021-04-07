@@ -298,6 +298,9 @@ const checkLoading = () => {
     console.log(loading.repeat(6000)) // répétition du fichier loading-pic.txt
     console.clear() // Clear affichage
     console.log(chalk.green(allcheckOk)) // Affichage répétition du fichier all-check-ok.txt
+    console.log(chalk.green('\nVersions: \n\t1.0 --- 04/07/2021 = CHECK by Imo999 : ALL IS GOOD')) //Suivit de versionning 
+    console.log(chalk.green('\t1.1 --- 04/07/2021 = Add Hang-man Game : ALL IS GOOD\n')) //Suivit de versionning
+    //  console.log(chalk.green('\t2.0 --- xx/xx/xxxx = CHECK by xxxx : Additionnal\n')) // Additionnal 
 
     // =====================================================
     // ===============>                     <===============
@@ -305,11 +308,7 @@ const checkLoading = () => {
     // ===============>                     <===============
     // =====================================================
 
-    console.log(chalk.green('\nVersions: \n\t1.0 --- 04/07/2021 = CHECK by Imo999 : ALL IS GOOD')) //Suivit de versionning 
-    console.log(chalk.green('\t1.1 --- 04/07/2021 = Add Hang-man Game : ALL IS GOOD\n')) //Suivit de versionning
-    //  console.log(chalk.green('\t2.0 --- xx/xx/xxxx = CHECK by xxxx : Additionnal\n')) // Additionnal 
-
-    process.exit(1) // LOADING : Exit
+    // process.exit(1) // LOADING : Exit
   }
 
   // #######################################################
@@ -330,6 +329,6 @@ const checkLoading = () => {
 // ####### GO !!! #######
 // ######################
 
-checkLoading() // Lancement du programme !!! 
+//checkLoading() // Lancement du programme !!! 
 
 exports.checkLoading = checkLoading
