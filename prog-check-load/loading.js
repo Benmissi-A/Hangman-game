@@ -118,7 +118,7 @@ const checkLoading = () => {
   // [10] /pics-hangman/menu.txt
   // [11] /pics-hangman/pendu.txt
   // [12] /utils/functions.js
-  // [12].... Addionnal 
+  // [13].... Addionnal 
 
   // #########################
   //          LOADING
