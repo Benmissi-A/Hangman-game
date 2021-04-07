@@ -1,7 +1,6 @@
 // prog-readfile.js
 const fs = require('fs')
 const chalk = require('chalk')
-const { clear } = require('console')
 
 // Check console DEV(outils)
 //console.log(chalk.green('\nCHECK by Imo999 : ALL IS GOOD\n')) //check DEV
@@ -332,5 +331,4 @@ const checkLoading = () => {
 
 //checkLoading() // Lancement du programme !!! 
 
-//exports.allcheckOk = allcheckOk
 exports.checkLoading = checkLoading

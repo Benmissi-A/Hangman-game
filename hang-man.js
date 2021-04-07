@@ -9,9 +9,9 @@ const { checkLoading } = require('./prog-check-load/loading')
 /* const { Console } = require('console') */
 
 
-while (true) {
+while (true) { // ADD while (imo999)
 
-  // ADD programme checkLoading (imo999)
+  // ADD programme PROG-CHECK-LOAD (imo999)
   checkLoading()
 
   // menu principal du jeu
@@ -34,5 +34,5 @@ while (true) {
         bestScores()
     }
   }
-  break
+  break// ADD break (imo999)
 }
