@@ -44,7 +44,7 @@ const checkLoading = () => {
   // #########################
 
   // E-DIR[1] : pics
-  if (!fs.existsSync('./pics-check')) {
+  if (!fs.existsSync('./prog-check-load/pics-check')) {
     console.clear() // Clear affichage
     console.log(chalk.red(`\nError E-DIR[1] : 'pics' doesn't folder exist\n`)) // affichage error
     process.exit(1) // E-DIR : Exit
@@ -126,44 +126,44 @@ const checkLoading = () => {
   // #########################
 
   // E-FILE[1] : /pics-check/e-not-exist.txt
-  if (!fs.existsSync('./pics-check/e-not-exist.txt')) {
+  if (!fs.existsSync('./prog-check-load/pics-check/e-not-exist.txt')) {
     console.clear() // Clear affichage
     console.log(chalk.red(`\nError E-FILE[1] : 'e-not-exist.txt' doesn't file exist\n`)) // affichage error
     process.exit(1) // E-FILE : Exit
   }
   // E-FILE[2] : /pics-check/e-note-file.txt
-  if (!fs.existsSync('./pics-check/e-not-file.txt')) {
+  if (!fs.existsSync('./prog-check-load/pics-check/e-not-file.txt')) {
     console.clear() // Clear affichage
     console.log(chalk.red(`\nError E-FILE[2] : 'e-not-file.txt' doesn't file exist\n`)) // affichage error
     process.exit(1) // E-FILE : Exit
   }
   // E-FILE[3] : /pics-check/usage-node.txt
-  if (!fs.existsSync('./pics-check/usage-node.txt',)) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8')) // lit le fichier e-not-exist.txt
+  if (!fs.existsSync('./prog-check-load/pics-check/usage-node.txt',)) {
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8')) // lit le fichier e-not-exist.txt
     console.clear() // Clear affichage
     console.log(enotExist) // affichage Error du fichier : e-not-exit.txt
     console.log(chalk.red(`\nError E-FILE[3] : 'usage-node.txt' doesn't file exist\n`)) // affichage error
     process.exit(1) // E-FILE : Exit
   }
   // E-FILE[4] : /pics-check/use-run-arg.txt
-  if (!fs.existsSync('./pics-check/use-run-arg.txt')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8')) // lit le fichier e-not-exist.txt
+  if (!fs.existsSync('./prog-check-load/pics-check/use-run-arg.txt')) {
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8')) // lit le fichier e-not-exist.txt
     console.clear() // Clear affichage
     console.log(enotExist) // affichage Error du fichier : e-not-exit.txt
     console.log(chalk.red(`\nError E-FILE[4] : 'use-run-arg.txt' doesn't file exist\n`)) // affichage error
     process.exit(1) // E-FILE : Exit
   }
   // E-FILE[5] : /pics-check/loading-pic.txt
-  if (!fs.existsSync('./pics-check/loading-pic.txt')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8')) // lit le fichier e-not-exist.txt
+  if (!fs.existsSync('./prog-check-load/pics-check/loading-pic.txt')) {
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8')) // lit le fichier e-not-exist.txt
     console.clear() // Clear affichage
     console.log(enotExist) // affichage Error du fichier : e-not-exit.txt
     console.log(chalk.red(`\nError E-FILE[5] : 'loading-pic.txt' doesn't file exist\n`)) // affichage error
     process.exit(1) // E-FILE : Exit
   }
   // E-FILE[6] : /pics-check/all-check-done.txt
-  if (!fs.existsSync('./pics-check/all-check-ok.txt')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8')) // lit le fichier e-not-exist.txt
+  if (!fs.existsSync('./prog-check-load/pics-check/all-check-ok.txt')) {
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8')) // lit le fichier e-not-exist.txt
     console.clear() // Clear affichage
     console.log(enotExist) // affichage Error du fichier : e-not-exit.txt
     console.log(chalk.red(`\nError E-FILE[6] : 'all-check-ok.txt' doesn't file exist\n`)) // affichage error
@@ -177,7 +177,7 @@ const checkLoading = () => {
 
   // E-FILE-ADD[1] /dico/dict-fr.txt
   if (!fs.existsSync('./src/dico/dict-fr.txt')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8'))
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8'))
     console.clear() // Clear affichage
     console.log(enotExist) // affichage Error du fichier : e-not-exit.txt
     console.log(chalk.red(`\nError E-FILE-ADD[1] : 'dict-fr.txt' doesn't file exist\n`)) // affichage error
@@ -185,7 +185,7 @@ const checkLoading = () => {
   }
   // E-FILE-ADD[2] /game/game-fr-js
   if (!fs.existsSync('./src/game/game-fr.js')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8'))
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8'))
     console.clear() // Clear affichage
     console.log(enotExist) // affichage Error du fichier : e-not-exit.txt
     console.log(chalk.red(`\nError E-FILE-ADD[2] : 'game-fr.js' doesn't file exist\n`)) // affichage error
@@ -193,7 +193,7 @@ const checkLoading = () => {
   }
   // E-FILE-ADD[3] /high-score/score-list-fr.json
   if (!fs.existsSync('./src/high-score/score-list-fr.json')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8'))
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8'))
     console.clear()
     console.log(enotExist) // affichage Error du fichier : e-not-exit.txt
     console.log(chalk.red(`\nError E-FILE-ADD[3] : 'score-list-fr.json' doesn't file exist\n`)) // affichage error
@@ -201,7 +201,7 @@ const checkLoading = () => {
   }
   // E-FILE-ADD[4] /high-score/scores-fr-js
   if (!fs.existsSync('./src/high-score/scores-fr.js')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8'))
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8'))
     console.clear()
     console.log(enotExist)
     console.log(chalk.red(`\nError E-FILE-ADD[4] : 'scores-fr.js' doesn't file exist\n`)) // affichage error
@@ -209,7 +209,7 @@ const checkLoading = () => {
   }
   // E-FILE-ADD[5] /pics-hangman/best-scores.txt
   if (!fs.existsSync('./src/pics-hangman/best-scores.txt')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8'))
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8'))
     console.clear()
     console.log(enotExist)
     console.log(chalk.red(`\nError E-FILE-ADD[5] : 'best-scores.txt' doesn't file exist\n`)) // affichage error
@@ -217,7 +217,7 @@ const checkLoading = () => {
   }
   // E-FILE-ADD[6] /pics-hangman/bravo.txt
   if (!fs.existsSync('./src/pics-hangman/bravo.txt')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8'))
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8'))
     console.clear()
     console.log(enotExist)
     console.log(chalk.red(`\nError E-FILE-ADD[6] : 'bravo.txt' doesn't file exist\n`)) // affichage error
@@ -225,7 +225,7 @@ const checkLoading = () => {
   }
   // E-FILE-ADD[7] /pics-hangman/game.txt
   if (!fs.existsSync('./src/pics-hangman/game.txt')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8'))
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8'))
     console.clear()
     console.log(enotExist)
     console.log(chalk.red(`\nError E-FILE-ADD[7] : 'game.txt' doesn't file exist\n`)) // affichage error
@@ -236,7 +236,7 @@ const checkLoading = () => {
 
   // E-FILE-ADD[9] /pics-hangman/header.txt
   if (!fs.existsSync('./src/pics-hangman/header.txt')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8'))
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8'))
     console.clear()
     console.log(enotExist)
     console.log(chalk.red(`\nError E-FILE-ADD[9] : 'header.txt' doesn't file exist\n`)) // affichage error
@@ -244,7 +244,7 @@ const checkLoading = () => {
   }
   // E-FILE-ADD[10] /pics-hangman/menu.txt
   if (!fs.existsSync('./src/pics-hangman/menu.txt')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8'))
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8'))
     console.clear()
     console.log(enotExist)
     console.log(chalk.red(`\nError E-FILE-ADD[10] : 'menu.txt' doesn't file exist\n`)) // affichage error
@@ -252,7 +252,7 @@ const checkLoading = () => {
   }
   // E-FILE-ADD[11] /pics-hangman/pendu.txt
   if (!fs.existsSync('./src/pics-hangman/pendu.txt')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8'))
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8'))
     console.clear()
     console.log(enotExist)
     console.log(chalk.red(`\nError E-FILE-ADD[11] : 'pendu.txt' doesn't file exist\n`)) // affichage error
@@ -260,7 +260,7 @@ const checkLoading = () => {
   }
   // E-FILE-ADD[12] /utils/functions.js
   if (!fs.existsSync('./src/utils/functions.js')) {
-    let enotExist = chalk.red(fs.readFileSync('./pics-check/e-not-exist.txt', 'utf-8'))
+    let enotExist = chalk.red(fs.readFileSync('./prog-check-load/pics-check/e-not-exist.txt', 'utf-8'))
     console.clear()
     console.log(enotExist)
     console.log(chalk.red(`\nError E-FILE-ADD[12] : 'functions.js' doesn't file exist\n`)) // affichage error
@@ -279,7 +279,7 @@ const checkLoading = () => {
 
   // LINE-CMD : Check start
   if (process.argv.length !== 3) { // 1 argument : run
-    const lineCmd = fs.readFileSync('./pics-check/usage-node.txt', 'utf-8') // lit le fichier usage-node.txt
+    const lineCmd = fs.readFileSync('./prog-check-load/pics-check/usage-node.txt', 'utf-8') // lit le fichier usage-node.txt
     console.clear() // Clear affichage
     console.log(chalk.yellow(lineCmd)) // affichage du fichier 
     process.exit(1) // LINE-CMD : Exit
@@ -293,13 +293,14 @@ const checkLoading = () => {
   // LOADING : Start
   if (process.argv[2] === 'run') {
     console.clear() // Clear affichage
-    const loading = fs.readFileSync('./pics-check/loading-pic.txt', 'utf-8') // lit le fichier loading-pic.txt
-    let allcheckOk = fs.readFileSync('./pics-check/all-check-ok.txt', 'utf-8')
+    const loading = fs.readFileSync('./prog-check-load/pics-check/loading-pic.txt', 'utf-8') // lit le fichier loading-pic.txt
+    let allcheckOk = fs.readFileSync('./prog-check-load/pics-check/all-check-ok.txt', 'utf-8')
     console.log(loading.repeat(6000)) // répétition du fichier loading-pic.txt
     console.clear() // Clear affichage
     console.log(chalk.green(allcheckOk)) // Affichage répétition du fichier all-check-ok.txt
     console.log(chalk.green('\nVersions: \n\t1.0 --- 04/07/2021 = CHECK by Imo999 : ALL IS GOOD')) //Suivit de versionning 
     console.log(chalk.green('\t1.1 --- 04/07/2021 = Add Hang-man Game : ALL IS GOOD\n')) //Suivit de versionning
+
     //  console.log(chalk.green('\t2.0 --- xx/xx/xxxx = CHECK by xxxx : Additionnal\n')) // Additionnal 
 
     // =====================================================
@@ -318,7 +319,7 @@ const checkLoading = () => {
 
   // ARG-RUN : Start
   else {
-    const useRun = chalk.red(fs.readFileSync('./pics-check/use-run-arg.txt', 'utf-8')) // lit le fichier use-run-arg.txt
+    const useRun = chalk.red(fs.readFileSync('./prog-check-load/pics-check/use-run-arg.txt', 'utf-8')) // lit le fichier use-run-arg.txt
     console.clear() // Clear affichage
     console.log(useRun) // affichage du fichier
     process.exit(1) // ARG-RUN : Exit
@@ -331,4 +332,5 @@ const checkLoading = () => {
 
 //checkLoading() // Lancement du programme !!! 
 
+//exports.allcheckOk = allcheckOk
 exports.checkLoading = checkLoading

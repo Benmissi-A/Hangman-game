@@ -15,5 +15,6 @@ const bestScores = () => {
 
   let quit = readlineSync.question('presser enter pour retourner au menu')
   quit = 'quit'
+  console.clear() // Add clear console (imo999)
 }
 exports.bestScores = bestScores

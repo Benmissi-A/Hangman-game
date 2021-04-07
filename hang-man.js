@@ -8,17 +8,18 @@ const { bestScores } = require('./src/high-score/scores-fr')
 const { checkLoading } = require('./prog-check-load/loading')
 /* const { Console } = require('console') */
 
+
 while (true) {
+
+  // ADD programme checkLoading (imo999)
   checkLoading()
 
   // menu principal du jeu
-
-
-
   let options = ['Commencer une partie', 'Meilleurs scores']
   let index = ''
   while (index !== -1) { // boucle qui propose le menu cancel nous fait sortir du programme
-    console.clear()
+
+    // console.clear() // Remove console.clear (imo999)
     console.log(chalk.yellow(header))
     console.log(chalk.yellow(menu))
     console.log('')
