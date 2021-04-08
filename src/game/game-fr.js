@@ -67,6 +67,7 @@ const game = () => {
         let quit = readlineSync.question('presser enter pour quitter')
         quit = 'quit'
         indexGame = -1
+        console.clear() // Add clear console (imo999)
       }
 
     }
@@ -82,6 +83,7 @@ const game = () => {
     register = readlineSync.question('Entrez trois lettres: ').toUpperCase()
     addScore(register, nbWords, totalFail)
   }
+
 }
 
 
