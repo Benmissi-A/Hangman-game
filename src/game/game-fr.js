@@ -67,7 +67,7 @@ const game = () => {
         let quit = readlineSync.question('presser enter pour quitter')
         quit = 'quit'
         indexGame = -1
-        console.clear() // Add clear console (imo999)
+        //console.clear() // Add clear console (imo999)
       }
 
     }
@@ -76,14 +76,14 @@ const game = () => {
   total = nbWords * 10 - totalFail
   total >= 0 ? total = total : total = 0
   console.log('')
-  console.log(`Vous avez trouvé ${nbWords} ete fait ${totalFail} votre score est de ${total} points`)
+  console.log(`Vous avez trouvé ${nbWords} mot(s) et fait ${totalFail} erreur(s) votre score est de ${total} points`)
   console.log('')
   let register = ""
   while (register.length !== 3) {
     register = readlineSync.question('Entrez trois lettres: ').toUpperCase()
     addScore(register, nbWords, totalFail)
   }
-
+console.clear()
 }
 
 

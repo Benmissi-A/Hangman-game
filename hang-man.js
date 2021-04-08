@@ -13,6 +13,8 @@ while (true) { // ADD while (imo999)
 
   // ADD programme PROG-CHECK-LOAD (imo999)
   checkLoading()
+  const debut = readlineSync.question('press enter to continue')
+  console.clear()
 
   // menu principal du jeu
   let options = ['Commencer une partie', 'Meilleurs scores']
